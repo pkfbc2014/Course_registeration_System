@@ -36,6 +36,7 @@ Partial Class Signin
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,16 +47,16 @@ Partial Class Signin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("宋体", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(94, 70)
+        Me.Label1.Location = New System.Drawing.Point(173, 40)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(591, 43)
+        Me.Label1.Size = New System.Drawing.Size(449, 43)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Course Registration System"
+        Me.Label1.Text = "吉林大学课程注册系统"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(102, 152)
+        Me.PictureBox1.Location = New System.Drawing.Point(93, 119)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(207, 207)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -66,7 +67,7 @@ Partial Class Signin
         '
         Me.identybox.FormattingEnabled = True
         Me.identybox.Items.AddRange(New Object() {"学生 (student)", "教师 (professor)", "管理员 (admin)"})
-        Me.identybox.Location = New System.Drawing.Point(514, 195)
+        Me.identybox.Location = New System.Drawing.Point(505, 162)
         Me.identybox.Name = "identybox"
         Me.identybox.Size = New System.Drawing.Size(200, 23)
         Me.identybox.TabIndex = 2
@@ -75,7 +76,7 @@ Partial Class Signin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(452, 203)
+        Me.Label2.Location = New System.Drawing.Point(443, 170)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 15)
         Me.Label2.TabIndex = 3
@@ -83,7 +84,7 @@ Partial Class Signin
         '
         'idbox
         '
-        Me.idbox.Location = New System.Drawing.Point(514, 237)
+        Me.idbox.Location = New System.Drawing.Point(505, 204)
         Me.idbox.Name = "idbox"
         Me.idbox.Size = New System.Drawing.Size(200, 25)
         Me.idbox.TabIndex = 4
@@ -91,7 +92,7 @@ Partial Class Signin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(412, 247)
+        Me.Label3.Location = New System.Drawing.Point(403, 214)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 15)
         Me.Label3.TabIndex = 5
@@ -99,7 +100,7 @@ Partial Class Signin
         '
         'passwordbox
         '
-        Me.passwordbox.Location = New System.Drawing.Point(514, 281)
+        Me.passwordbox.Location = New System.Drawing.Point(505, 248)
         Me.passwordbox.Name = "passwordbox"
         Me.passwordbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passwordbox.Size = New System.Drawing.Size(200, 25)
@@ -108,7 +109,7 @@ Partial Class Signin
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(364, 291)
+        Me.Label4.Location = New System.Drawing.Point(355, 258)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(140, 15)
         Me.Label4.TabIndex = 7
@@ -116,18 +117,28 @@ Partial Class Signin
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(534, 348)
+        Me.Button1.Location = New System.Drawing.Point(525, 315)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(154, 30)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "登录"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(437, 426)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(351, 15)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Copyright Reserved Jilin University CS 6018"
+        '
         'Signin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.passwordbox)
@@ -160,4 +171,5 @@ Partial Class Signin
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents BindingSource2 As BindingSource
     Friend WithEvents BindingSource3 As BindingSource
+    Friend WithEvents Label5 As Label
 End Class

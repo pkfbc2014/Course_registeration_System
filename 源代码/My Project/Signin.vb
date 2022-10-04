@@ -2,7 +2,6 @@
     Dim sds, pds, ads As New DataSet
     Private Sub Signin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ssql, psql, asql As String
-
         ssql = "select * from student"
         psql = "select * from professor"
         asql = "select * from admin"
@@ -17,7 +16,6 @@
             disp(asql, ads)
             BindingSource3.DataSource = ads
             BindingSource3.DataMember = ads.Tables(0).TableName
-
         Catch
             MsgBox(Err.Description, vbYes, "从数据库获取人员信息失败")
             Exit Sub
@@ -39,7 +37,7 @@
                     nowUserpwd = passwordbox.Text
                     nowUserright = identybox.SelectedIndex
                     nowUsername = sds.Tables(0).Rows(fd).Item(2)
-                    GradePrint.Show() '跳转到学生窗体
+                    Form2.Show() '跳转到学生窗体
                     Me.Hide()
                 Else
                     MsgBox("用户名或密码输入有误，请重新输入！",, "Error")
@@ -53,7 +51,7 @@
                     nowUserpwd = passwordbox.Text
                     nowUserright = identybox.SelectedIndex
                     nowUsername = pds.Tables(0).Rows(fd).Item(2)
-                    CheckCourse.Show() ' 跳转到教师窗体
+                    Form2.Show() '跳转到学生窗体
                     Me.Hide()
                 Else
                     MsgBox("用户名或密码输入有误，请重新输入！",, "Error")
@@ -66,7 +64,7 @@
                     nowUserid = idbox.Text
                     nowUserpwd = passwordbox.Text
                     nowUserright = identybox.SelectedIndex
-                    Messager.Show() ' 跳转到管理员窗体
+                    Form2.Show() '跳转到学生窗体
                     Me.Hide()
                 Else
                     MsgBox("用户名或密码输入有误，请重新输入！",, "Error")

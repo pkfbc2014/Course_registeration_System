@@ -7,12 +7,13 @@ Module ModuleMySQL ' 数据库连接相关
     Private Uid = "root" ' MySQL 用户名
     Private Pwd = "root" ' MySQL 密码
     Private database = "admininstration_system" ' 数据库名
-    Public cnStr As String = "server=" & server & ";Uid=" & Uid & ";Pwd=" & Pwd & ";database=" & database & ";"
+    Public cnStr As String = "server=" & server & ";Uid=" & Uid & ";Pwd=" & Pwd & ";database=" & database & ";Charset=utf8;"
     Public cn As New MySqlConnection(cnStr) ' 数据库连接器
     Public da As MySqlDataAdapter ' 数据适配器对象
 
     Public whole_sid As String ' 全局变量 sid
     Public whole_pid As String ' 全局变量 pid
+    Public nowsemester As String ' 全局变量 当前学期
 
     Public flag_disp = False ' disp函数的一个 bug
 
@@ -27,30 +28,6 @@ Module ModuleMySQL ' 数据库连接相关
         da = Nothing
         cn.Close()
     End Sub
-    Public Function DatabaseModify(ByVal MySQL_Statement As String, ByVal Statement_Type As CommandType) As Integer
-        Dim Execute_Command As MySqlCommand = New MySqlCommand(MySQL_Statement, cn)
-        Try
-            cn.Open()
-            Return Execute_Command.ExecuteNonQuery()
-        Catch ex As Exception
-            Return 0
-        Finally
-            cn.Close()
-        End Try
-    End Function
-
-    Public Function DatabaseQuery(ByVal MySQL_Statement As String, ByVal Statement_Type As CommandType) As DataTable
-        Dim DataAdapter As New MySqlDataAdapter(MySQL_Statement, cn)
-        Dim DataSet As New DataSet
-        Try
-            DataAdapter.Fill(DataSet)
-            Return DataSet.Tables(0)
-        Catch ex As Exception
-            Return Nothing
-        Finally
-            cn.Close()
-        End Try
-    End Function
 
     Public Sub exsql(ByVal psql As String)  ' 执行SQL语句，可以是插入、删除、修改语句
         cn.Open()
@@ -62,10 +39,6 @@ Module ModuleMySQL ' 数据库连接相关
 End Module
 
 Public Class Messager
-    Private Sub frmCQ_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' 管理学生信息
         Me.Hide()
         Stmain.Show()
@@ -79,5 +52,9 @@ Public Class Messager
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click ' 管理课程信息
         Me.Hide()
         ' GradePrint.Show() ' 管理员管理课程信息
+    End Sub
+
+    Private Sub Messager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

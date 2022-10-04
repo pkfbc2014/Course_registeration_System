@@ -21,8 +21,4 @@
         Pmain.Tmain_Load(sender, e)
         Me.Close()
     End Sub
-
-    Private Sub Padd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
