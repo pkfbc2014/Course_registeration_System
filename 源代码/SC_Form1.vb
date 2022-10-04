@@ -15,6 +15,7 @@ Public Class SelectCourse1
         DataGridView1.DataSource = ds1.Tables(0)
         DataGridView1.Columns("sid").Visible = False
         DataGridView1.Columns("pid").Visible = False
+        SelectCourse2.select_num = DataGridView1.Rows.Count
     End Sub
 
     '退课按钮操作

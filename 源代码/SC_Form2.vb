@@ -6,6 +6,8 @@
     Dim mysql1 As String = "select * from grade NATURAL JOIN professor"
     Dim dataset1 As New DataSet
 
+    Public select_num As Integer
+
     '主框架加载代码
     Private Sub FrmCSD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -29,10 +31,7 @@
             MsgBox(Err.Description, vbYes, "出错了!")
             Exit Sub
         End Try
-
-
     End Sub
-
 
     'Button1代码
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -41,28 +40,31 @@
         Try 'listview的结构:CID,CName,CCredit,TName,pid;其中后两项置空，在后续函数中进行填充
             cn.Open()
             If ListView1.CheckedItems.Count <> 0 Then
-                For Each item In ListView1.CheckedItems
-                    sno = nowUserid
-                    con = Trim(item.SubItems(0).Text)
-                    pid = Trim(item.SubItems(4).Text)
-                    cname = Trim(item.SubItems(1).Text) '新加
-                    credit = Trim(item.SubItems(2).Text) '新加
-                    scd = Format(Now, "yyyy") & "年第" & IIf(Now.Month > 7, "二学期", "一学期")
-                    vsql = "INSERT INTO grade(sid,pid,cid,cname,credit,semester,grade) VALUES('" & sno & "','"
-                    vsql &= pid & "','" & con & "','" & cname & "','" & credit & "','" & scd & "',NULL)"
-                    'vsql = "INSERT INTO grade(CID,StID,TID,SCDate) VALUES('" & con & "','"
-                    'vsql &= sno & "','" & tid & "','" & scd & "')"
-                    cmd.CommandText = vsql
-                    cmd.Connection = cn
-                    cmd.ExecuteNonQuery()
-                Next
+                If ListView1.CheckedItems.Count + select_num > 7 Then
+                    MsgBox("选课数目上限为 6 门")
+                    cn.Close()
+                Else
+                    For Each item In ListView1.CheckedItems
+                        sno = nowUserid
+                        con = Trim(item.SubItems(0).Text)
+                        pid = Trim(item.SubItems(4).Text)
+                        cname = Trim(item.SubItems(1).Text) '新加
+                        credit = Trim(item.SubItems(2).Text) '新加
+                        scd = Format(Now, "yyyy") & "年第" & IIf(Now.Month > 7, "二学期", "一学期")
+                        vsql = "INSERT INTO grade(sid,pid,cid,cname,credit,semester,grade) VALUES('" & sno & "','"
+                        vsql &= pid & "','" & con & "','" & cname & "','" & credit & "','" & scd & "',NULL)"
+                        cmd.CommandText = vsql
+                        cmd.Connection = cn
+                        cmd.ExecuteNonQuery()
+                    Next
+                    cn.Close()
+                    Button2_Click(sender, e)
+                    Me.Close()
+                End If
             End If
         Catch ex As Exception
             MsgBox(Err.Description, , "信息")
         End Try
-        cn.Close()
-        Button2_Click(sender, e)
-        Me.Close()
     End Sub
 
 
