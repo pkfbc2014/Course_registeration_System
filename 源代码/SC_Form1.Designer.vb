@@ -117,7 +117,7 @@ Partial Class SelectCourse1
         Me.Controls.Add(Me.lblStid)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "SelectCourse1"
-        Me.Text = "选课"
+        Me.Text = "选课页面"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

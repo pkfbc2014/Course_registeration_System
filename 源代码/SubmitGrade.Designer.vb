@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ProfessorMain
+Partial Class SubmitGrade
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -22,54 +22,54 @@ Partial Class ProfessorMain
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(129, 222)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 30)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "录入成绩"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 104)
+        Me.Label1.Location = New System.Drawing.Point(54, 164)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(292, 15)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "欢迎您，老师，请选择您需要办理的事务："
+        Me.Label1.Size = New System.Drawing.Size(127, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "请选择成绩等级："
         '
-        'Button2
+        'ComboBox1
         '
-        Me.Button2.Location = New System.Drawing.Point(129, 298)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 30)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "管理课程"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"93", "83", "73", "63", "53", "null"})
+        Me.ComboBox1.Location = New System.Drawing.Point(187, 161)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox1.TabIndex = 1
         '
-        'ProfessorMain
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(124, 290)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(122, 30)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "提交成绩"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'SubmitGrade
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(382, 453)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "ProfessorMain"
-        Me.Text = "教师主界面"
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "SubmitGrade"
+        Me.Text = "录入成绩"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button1 As Button
 End Class

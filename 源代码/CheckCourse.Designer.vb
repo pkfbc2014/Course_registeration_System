@@ -80,7 +80,7 @@ Partial Class CheckCourse
         Me.Controls.Add(Me.teachername)
         Me.Controls.Add(Me.Label1)
         Me.Name = "CheckCourse"
-        Me.Text = "SubmitGrade"
+        Me.Text = "提交成绩"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

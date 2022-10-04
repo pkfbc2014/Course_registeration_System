@@ -57,7 +57,7 @@ Partial Class GradePrint
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "GradePrint"
-        Me.Text = "GradePrint"
+        Me.Text = "打印成绩单"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

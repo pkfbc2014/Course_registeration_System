@@ -141,4 +141,12 @@
     Private Sub 课程表ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 课程表ToolStripMenuItem.Click
         GradePrint.Show()
     End Sub
+
+    Private Sub 学生管理ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 学生管理ToolStripMenuItem.Click
+        Stmain.Show()
+    End Sub
+
+    Private Sub 教师管理ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 教师管理ToolStripMenuItem.Click
+        Pmain.Show()
+    End Sub
 End Class

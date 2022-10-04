@@ -112,7 +112,7 @@ Partial Class SelectCourse3
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "SelectCourse3"
-        Me.Text = "选课"
+        Me.Text = "管理选课"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -42,6 +42,8 @@ Partial Class Form2
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.学生管理ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.教师管理ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +63,7 @@ Partial Class Form2
         '
         '管理ToolStripMenuItem
         '
-        Me.管理ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.选课设置ToolStripMenuItem, Me.更改密码ToolStripMenuItem})
+        Me.管理ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.选课设置ToolStripMenuItem, Me.更改密码ToolStripMenuItem, Me.学生管理ToolStripMenuItem, Me.教师管理ToolStripMenuItem})
         Me.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem"
         Me.管理ToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
         Me.管理ToolStripMenuItem.Text = "管理"
@@ -88,13 +90,13 @@ Partial Class Form2
         '课程表ToolStripMenuItem
         '
         Me.课程表ToolStripMenuItem.Name = "课程表ToolStripMenuItem"
-        Me.课程表ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.课程表ToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
         Me.课程表ToolStripMenuItem.Text = "查看成绩"
         '
         '选课ToolStripMenuItem
         '
         Me.选课ToolStripMenuItem.Name = "选课ToolStripMenuItem"
-        Me.选课ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.选课ToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
         Me.选课ToolStripMenuItem.Text = "选课"
         '
         '教师ToolStripMenuItem
@@ -107,7 +109,7 @@ Partial Class Form2
         '成绩录入ToolStripMenuItem
         '
         Me.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem"
-        Me.成绩录入ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.成绩录入ToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
         Me.成绩录入ToolStripMenuItem.Text = "成绩录入"
         '
         'Label1
@@ -170,6 +172,18 @@ Partial Class Form2
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
+        '学生管理ToolStripMenuItem
+        '
+        Me.学生管理ToolStripMenuItem.Name = "学生管理ToolStripMenuItem"
+        Me.学生管理ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.学生管理ToolStripMenuItem.Text = "学生管理"
+        '
+        '教师管理ToolStripMenuItem
+        '
+        Me.教师管理ToolStripMenuItem.Name = "教师管理ToolStripMenuItem"
+        Me.教师管理ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.教师管理ToolStripMenuItem.Text = "教师管理"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
@@ -215,4 +229,6 @@ Partial Class Form2
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents 学生管理ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 教师管理ToolStripMenuItem As ToolStripMenuItem
 End Class

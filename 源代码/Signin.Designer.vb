@@ -47,7 +47,7 @@ Partial Class Signin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("宋体", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(173, 40)
+        Me.Label1.Location = New System.Drawing.Point(176, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(449, 43)
         Me.Label1.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class Signin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(93, 119)
+        Me.PictureBox1.Location = New System.Drawing.Point(96, 145)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(207, 207)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -67,7 +67,7 @@ Partial Class Signin
         '
         Me.identybox.FormattingEnabled = True
         Me.identybox.Items.AddRange(New Object() {"学生 (student)", "教师 (professor)", "管理员 (admin)"})
-        Me.identybox.Location = New System.Drawing.Point(505, 162)
+        Me.identybox.Location = New System.Drawing.Point(508, 188)
         Me.identybox.Name = "identybox"
         Me.identybox.Size = New System.Drawing.Size(200, 23)
         Me.identybox.TabIndex = 2
@@ -76,7 +76,7 @@ Partial Class Signin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(443, 170)
+        Me.Label2.Location = New System.Drawing.Point(446, 196)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 15)
         Me.Label2.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class Signin
         '
         'idbox
         '
-        Me.idbox.Location = New System.Drawing.Point(505, 204)
+        Me.idbox.Location = New System.Drawing.Point(508, 230)
         Me.idbox.Name = "idbox"
         Me.idbox.Size = New System.Drawing.Size(200, 25)
         Me.idbox.TabIndex = 4
@@ -92,7 +92,7 @@ Partial Class Signin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(403, 214)
+        Me.Label3.Location = New System.Drawing.Point(406, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 15)
         Me.Label3.TabIndex = 5
@@ -100,7 +100,7 @@ Partial Class Signin
         '
         'passwordbox
         '
-        Me.passwordbox.Location = New System.Drawing.Point(505, 248)
+        Me.passwordbox.Location = New System.Drawing.Point(508, 274)
         Me.passwordbox.Name = "passwordbox"
         Me.passwordbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passwordbox.Size = New System.Drawing.Size(200, 25)
@@ -109,7 +109,7 @@ Partial Class Signin
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(355, 258)
+        Me.Label4.Location = New System.Drawing.Point(358, 284)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(140, 15)
         Me.Label4.TabIndex = 7
@@ -117,7 +117,7 @@ Partial Class Signin
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(525, 315)
+        Me.Button1.Location = New System.Drawing.Point(528, 341)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(154, 30)
         Me.Button1.TabIndex = 8
@@ -149,7 +149,7 @@ Partial Class Signin
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Signin"
-        Me.Text = "Signin"
+        Me.Text = "登录窗口"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
